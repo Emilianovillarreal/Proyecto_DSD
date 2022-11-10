@@ -18,8 +18,7 @@ signal s_aux3 : STD_LOGIC_vector(14 downto 0);
 signal frecuencia : std_logic_vector(29 downto 0);
 
  
---HACER 16 RANGOS Y MOSTRARLOS POR EL DISPLAY.
---SI ESTA ENTRE TANTO Y TANTO, ENTONCES LA FRECUENCIA ES EL PROMEDIO 
+.--FALTARIA REVISAR QUE TIENE DE MAL EL BLOQUE 2 
 
 begin
 
@@ -48,6 +47,13 @@ port map
 	RST => RST,
 	i_sign_displaced => s_aux3,
 	o_frec => frecuencia
+);
+
+U5: entity work.rangos_deco
+port map
+(	frecuencia => frecuencia,
+	anodo => ANODO,
+	Salida => SALIDA	
 );
 	
 	
