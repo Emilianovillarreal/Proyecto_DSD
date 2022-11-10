@@ -36,6 +36,15 @@ port map
 	i_calc_frec => s_aux1,
 	SALIDA => s_aux3);
 	
+U4: entity work.MULTIPLER_X_1000
+port map
+(	CLK => CLK,
+	RST => RST,
+	i_sign_displaced => s_aux3,
+	o_frec => frecuencia
+);
+	
+	
 
 	
 
