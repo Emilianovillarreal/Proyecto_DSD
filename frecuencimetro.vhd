@@ -11,7 +11,7 @@ entity frecuencimetro is
 end frecuencimetro;
 
 architecture Behavioral of frecuencimetro is
-signal s_i_sal_cont2 :std_logic_vector(25 downto 0);
+--signal s_i_sal_cont2 :std_logic_vector(25 downto 0);
 signal s_aux1 : STD_LOGIC_vector(14 downto 0); 
 Signal s_aux2 : STD_LOGIC_vector(25 downto 0);
 signal s_aux3 : STD_LOGIC_vector(14 downto 0); 
@@ -26,7 +26,7 @@ U1: entity work.contador
 port map
 (	i_señ_cuadrada => I_SEÑAL,
 	RST => RST,
-	i_sal_cont2 => s_i_sal_cont2, 
+	i_sal_cont2 => s_aux2, 
 	SAL => s_aux1);
 U2: entity work.Contado2 
 port map 
