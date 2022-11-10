@@ -15,6 +15,10 @@ signal s_i_sal_cont2 :std_logic_vector(25 downto 0);
 signal s_aux1 : STD_LOGIC_vector(14 downto 0); 
 Signal s_aux2 : STD_LOGIC_vector(25 downto 0);
 
+ 
+--HACER 16 RANGOS Y MOSTRARLOS POR EL DISPLAY.
+--SI ESTA ENTRE TANTO Y TANTO, ENTONCES LA FRECUENCIA ES EL PROMEDIO 
+
 begin
 
 U1: entity work.contador
