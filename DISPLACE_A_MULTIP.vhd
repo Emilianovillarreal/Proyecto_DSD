@@ -33,6 +33,7 @@ s_frequency <= std_logic_vector(unsigned(cte_1000)*unsigned(s_shift_count));
 
 
 
+
 process(clk, rst, S_SHIFT_COUNT)
 begin
 	if rising_edge(clk)then 
@@ -41,4 +42,5 @@ begin
 end process;
 
 end Behavioral;
+
 
