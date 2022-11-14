@@ -5,11 +5,11 @@ use IEEE.NUMERIC_STD.ALL;
 entity CONTADOR_2 is
     Port ( RST : in  STD_LOGIC;
            i_square : in  STD_LOGIC;
-           o_count : out  STD_LOGIC_VECTOR (14 downto 0));
+           o_count : out  STD_LOGIC_VECTOR (13 downto 0));
 end CONTADOR_2;
 
 architecture Behavioral of CONTADOR_2 is
-signal aux2: std_logic_vector(14 downto 0);
+signal aux2: std_logic_vector(13 downto 0);
 
 begin
 
@@ -23,6 +23,7 @@ end if;
 end process;
 
 o_count <= aux2;
+
 
 end Behavioral;
 
