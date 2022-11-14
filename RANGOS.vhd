@@ -15,9 +15,9 @@ begin
 
 
 
+
 Rangos: process(FREQUENCY)
---constant A : INTEGER := 10;
---constant B : INTEGER := 1250;
+
 begin 
 	if ((FREQUENCY >= std_logic_vector(to_unsigned(10, FREQUENCY'length))) AND (FREQUENCY <= std_logic_vector(to_unsigned(1250, FREQUENCY'length)))) then 
 		SELECTION <= "0000";
@@ -55,9 +55,6 @@ begin
 		Selection <= "1111";
 	end if;
 end process;
-
-
-
 
 end Behavioral;
 
