@@ -33,7 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity deco is
     Port ( Entrada : in  STD_LOGIC_VECTOR (3 downto 0);
            Salida : out  STD_LOGIC_VECTOR (6 downto 0);
-		   anodos : out  STD_LOGIC_VECTOR (3 downto 0)
+           anodos : out  STD_LOGIC_VECTOR (3 downto 0)
          );
 end deco;
 
@@ -44,42 +44,47 @@ begin
 
     anodos <= "1110";
 
+--AGREGUE CLOCK Y RESET
     deco: 
     process (Entrada)
+     --constant Limite_tiempo: std_logic_vector(22 downto 0):= "10011000100101101000000";-- 512 [ms]
         begin
+          
             if    Entrada = "0000" then
-                Salida <= "1000000";	--cero
+                Salida <= "1000000";    --cero
             elsif Entrada = "0001" then 
-                Salida <= "1111001";	--uno	
+                Salida <= "1111001";    --uno   
             elsif Entrada = "0010" then 
-                Salida <= "0100100";	--dos
+                Salida <= "0100100";    --dos
             elsif Entrada = "0011" then 
-                Salida <= "0110000";	--tres
+                Salida <= "0110000";    --tres
             elsif Entrada = "0100" then 
-                Salida <= "0011001";	--cuatro
+                Salida <= "0011001";    --cuatro
             elsif Entrada = "0101" then 
-                Salida <= "0010010";	--cinco
+                Salida <= "0010010";    --cinco
             elsif Entrada = "0110" then 
-                Salida <= "0000010";	--seis
+                Salida <= "0000010";    --seis
             elsif Entrada = "0111" then 
-                Salida <= "1111000";	--siete
+                Salida <= "1111000";    --siete
             elsif Entrada = "1000" then 
-                Salida <= "0000000";	--ocho
+                Salida <= "0000000";    --ocho
             elsif Entrada = "1001" then 
-                Salida <= "0011000";	--nueve
+                Salida <= "0011000";    --nueve
             elsif Entrada = "1010" then 
-                Salida <= "0001000";	--A
+                Salida <= "0001000";    --A
             elsif Entrada = "1011" then 
-                Salida <= "0000011";	--B
+                Salida <= "0000011";    --B
             elsif Entrada = "1100" then 
-                Salida <= "1000110";	--C
+                Salida <= "1000110";    --C
             elsif Entrada = "1101" then 
-                Salida <= "0100001";	--D
+                Salida <= "0100001";    --D
             elsif Entrada = "1110" then 
-                Salida <= "0000110";	--E
+                Salida <= "0000110";    --E
             else 
-                Salida <= "0001110";	--F
+                Salida <= "0001110";    --F
             end if;
+            
+    
             
     end process deco;
 
