@@ -32,13 +32,6 @@ if rst = '1' then
 
 end process;
 
-U2: process(clk, aux1)
-begin
-	if rising_edge(clk) then 
-		o_count_reach <= count_reach;
-	end if;
-end process;
-
+o_count_reach <= count_reach;
 
 end Behavioral;
-
